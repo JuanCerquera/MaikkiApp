@@ -1,0 +1,55 @@
+<h1>Bienvenido/a a Maikki</h1>
+
+  <div class="container" style="width:50%">
+    <div class="image-container" style="width:100%">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+      (dragEnd)="markerDragEnd($event)"></agm-marker>
+  </agm-map>
+  </div>
+  </div>
+
+  <div class="container" style="width: 49%">
+
+    <p>
+      Este software te ayudará a conocer la viabilidad de maíz en tu predio.
+    </p>
+    <h3>Empecemos llenando estos datos:</h3>
+    <!--Formulario-->
+    <form>
+      <input type="text" class="form-control" placeholder="Buscar ubicación cercana" (keydown.enter)="$event.preventDefault()"  autocorrect="off" autocapitalize="off" spellcheck="off" #search>
+      <label>Dirección exacta: </label> <br>
+      <input disabled name="location" id="location" value="{{address}}" style="width:100%">
+      <br>
+      <label for="size">Tamaño del predio: </label>
+      <select name="size" id="size">
+        <option value="small">Pequeño</option>
+        <option value="medium">Mediano</option>
+        <option value="big">Grande</option>
+      </select>
+      <br>
+      <label for="slope">Pendiente del terreno: </label>
+      <select name="slope" id="slope">
+        <option value="0">0°</option>
+        <option value="30">30°</option>
+        <option value="45">45°</option>
+      </select>
+      <br>
+      <label for="budget">Disponibilidad económica: </label>
+      <select name="budget" id="budget">
+        <option value="low">Baja</option>
+        <option value="medium">Media</option>
+        <option value="high">Alta</option>
+      </select>
+      <br>
+      <label for="seed">Variedad de semilla: </label>
+      <select name="seed" id="seed">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <br>
+      <button id="execute">Ejecutar</button>
+    </form>
+
+  </div>

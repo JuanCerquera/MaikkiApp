@@ -1,0 +1,79 @@
+
+<body>
+<div id="clima" >
+
+  <div class="image-container" style="width:50%">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="false"
+      (dragEnd)="markerDragEnd($event)"></agm-marker>
+  </agm-map>
+  </div>
+
+<!-- app.component.html -->
+
+
+  <div class="container"  style="width:50%;align-items: center">
+
+    <p style="text-align:center;">
+    Estás ubicado en: <strong>{{department}}</strong> <br>
+    La información de tu zona para el <strong>{{date.getDate()}}-{{date.getMonth()+1}}-{{date.getFullYear()}}</strong> es: <br>
+  </p>
+    <table class="stylishTable">
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td>Alura sobre el nivel del mar:</td>
+          <td><strong>{{altitude}}</strong> msnm</td>
+        </tr>
+        <tr>
+          <td>Nivel de lluvia (precipitación):</td>
+          <td><strong>{{precipitation}}</strong> mm</td>
+        </tr>
+        <tr>
+          <td>Temperatura:</td>
+          <td><strong>{{temperature}}</strong> °C</td>
+        </tr>
+        <tr>
+          <td>Humedad relativa:</td>
+          <td><strong>{{humidity}}</strong> %</td>
+        </tr>
+        <tr>
+          <td>Radiación solar:</td>
+          <td><strong>{{radiation}}</strong>W/m<sup>2</sup></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr/>
+  <div class="container" style="width:50%">
+    <div class="image-container">
+      <img src="assets/images/histogramPlaceholder.png" alt="" class="d-inline-block align-middle mr-2">
+    </div>
+  </div>
+
+  <div class="container" style="width:50%">
+    <p>
+      Observando el régimen de lluvia de su zona se registra un comportamiento: <br>
+    </p>
+    <h2><strong>{{behavior}}</strong></h2>
+  </div>
+
+  <div class="container" style="min-width:100%">
+
+    <p style="text-align: center">
+      Evaluando tu zona para los requerimientos hídricos del maíz, te recomendamos un sistema de:<br>
+      <span style="font-size:40px;">{{system_type}}</span>
+    </p>
+    <p style="text-align: justify">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget ex sed metus maximus pulvinar quis a
+      mauris. Nunc quis nisl nec ante dignissim venenatis. Nullam vitae purus lacus. Suspendisse
+      potenti. Donec aliquam orci vitae orci mollis, sit amet varius dolor pulvinar. Donec id vehicula neque.
+      Suspendisse lectus odio, laoreet sodales tortor vel, condimentum fermentum tellus.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- Map -->
+
