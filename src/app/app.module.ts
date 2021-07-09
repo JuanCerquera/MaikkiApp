@@ -14,6 +14,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ClimateComponent } from './climate/climate.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { NutrientsSelectorComponent } from './nutrients-selector/nutrients-selector.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AgmCoreModule } from '@agm/core';
     SoilComponent,
     StartFormComponent,
     NavigationComponent,
-    ClimateComponent
+    ClimateComponent,
+    NutrientsSelectorComponent
   ],
   imports: [
     BrowserModule,

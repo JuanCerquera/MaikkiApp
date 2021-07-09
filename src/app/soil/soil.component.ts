@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NutrientsSelectorComponent } from '../nutrients-selector/nutrients-selector.component';
 
 @Component({
   selector: 'app-soil',

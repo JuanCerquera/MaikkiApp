@@ -85,3 +85,8 @@ h2{
   border-bottom-right-radius: 20px;
 }
 
+.clickableText{
+  text-decoration: underline;
+  cursor: pointer;
+}
+

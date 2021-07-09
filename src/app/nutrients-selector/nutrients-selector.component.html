@@ -1,0 +1,75 @@
+<div class="container" style="width:40%">
+      <table class="stylishTable">
+        <tbody>
+        <tr>
+          <td style="font-weight: bold">Nutriente</td>
+          <td style="font-weight: bold">Valor</td>
+        </tr>
+        <tr>
+          <td class="clickableText" (click)="showOrHide('Nitrógeno',0)">Nitrógeno</td>
+          <td>V_nitrogeno</td>
+        </tr>
+        <tr>
+          <td class="clickableText" (click)="showOrHide('Fósforo',1)">Fósforo</td>
+          <td>V_fosforo</td>
+        </tr>
+        <tr>
+          <td class="clickableText" (click)="showOrHide('Potasio',2)">Potasio</td>
+          <td>V_potasio</td>
+        </tr>
+
+        <tr>
+          <td class="clickableText" (click)="showOrHide('Calcio',3)">Calcio</td>
+          <td>V_calcio</td>
+        </tr>
+        <tr>
+          <td class="clickableText" (click)="showOrHide('Magnesio',4)">Magnesio</td>
+          <td>V_magnesio</td>
+        </tr>
+        <tr>
+          <td class="clickableText" (click)="showOrHide('Azufre',5)">Azufre</td>
+          <td>V_azufre</td>
+        </tr>
+        <tr>
+          <td>Cobre</td>
+          <td>V_cobre</td>
+        </tr>
+        <tr>
+          <td>Zinc</td>
+          <td>V_zinc</td>
+        </tr>
+        <tr>
+          <td>Boro</td>
+          <td>V_boro</td>
+        </tr>
+        <tr>
+          <td>Hierro</td>
+          <td>V_hierro</td>
+        </tr>
+        <tr>
+          <td>Manganeso</td>
+          <td>V_manganeso</td>
+        </tr>
+        <tr>
+          <td>Molibdeno</td>
+          <td>V_molibdeno</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="container" style="border:1px solid black; width:60%; align: right; border-radius: 20px" *ngIf="show">
+      <h1>{{nutrient}}</h1>
+      <h3 style="font-weight: bold">Deficiencia de {{nutrient}} empeorado por:</h3>
+      <ul>
+        <li *ngFor="let item of nutrientsDeficences[index]">{{item}}</li>
+      </ul>
+      <br/>
+      <h3 style="font-weight: bold">El {{nutrient}} tiene importancia para:</h3>
+      <ul>
+        <li *ngFor="let item of nutrientsFacts[index]">{{item}}</li>
+      </ul>
+      <span class="clickableText" style="font-size: 15px; color: blue" (click)="showOrHide('',0)">Cerrar</span>
+
+    </div>
