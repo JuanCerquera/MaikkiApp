@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faSearch, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,10 +7,15 @@ import { faSearch, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  @Input() initial: boolean = true;
   faSearch = faSearch;
   faBell = faBell;
   faUser = faUser;
-  constructor() { }
+
+  items: string[] = ['Clima', 'Suelo'];
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }
