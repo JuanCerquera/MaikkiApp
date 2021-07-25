@@ -4,21 +4,23 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "postinstall": "ng build --prod"
+    "test": "ng test"
   },
   "engines": {
-    "node": "16.3.0",
-    "npm": "7.15.0"
+    "node": "14.17.0",
+    "npm": "7.19.0"
   },
   "private": true,
   "dependencies": {
     "@agm/core": "^1.1.0",
+    "@angular-devkit/build-angular": "~12.0.2",
     "@angular/animations": "~12.0.2",
+    "@angular/cli": "~12.0.2",
     "@angular/common": "~12.0.2",
     "@angular/compiler": "~12.0.2",
+    "@angular/compiler-cli": "~12.0.2",
     "@angular/core": "~12.0.2",
     "@angular/forms": "~12.0.2",
     "@angular/google-maps": "^12.0.3",
@@ -38,11 +40,8 @@
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
-    "zone.js": "~0.11.4",
-    "@angular-devkit/build-angular": "~12.0.2",
-    "@angular/cli": "~12.0.2",
-    "@angular/compiler-cli": "~12.0.2",
-    "typescript": "~4.2.3"
+    "typescript": "~4.2.3",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@types/google.maps": "^3.45.1",
